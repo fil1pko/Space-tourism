@@ -1,0 +1,197 @@
+#technology{
+    background-image: url('/assets/technology/background-technology-mobile.jpg');
+    @include bg;
+    main{
+        text-align: center;
+        h5{
+            @include heading5-mb;
+            color: $white;
+            padding-top: 3.3802816901408vh;
+            padding-bottom: 4.507042253521127vh;
+            span{
+                font-weight: bold;
+                mix-blend-mode: normal;
+                opacity: 0.25;
+                padding-right: 18px;
+            }
+        }
+        .img{
+            width: 100vw;
+            min-height: 23.943661971830984vh;
+            margin-bottom: 4.788732394366197vh;
+        }
+        .img-1{
+            display: none;
+        }
+        .wraper{
+            ul{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding-bottom: 3.6619718309859155vh;
+                gap: 16px;
+                li{
+                    a{
+                        color: $white;
+                        text-decoration: none;
+                        display: flex;
+                        width: clamp(2rem, 10.667vw, 3.125rem);
+                        height: clamp(2rem, 10.667vw, 3.125rem);
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        letter-spacing: 1px;
+                        border: 1px solid rgba(255,255,255,0.25);
+                    }
+                }
+            }
+            h6{
+                font-size: 14px;
+                letter-spacing: 2.36px;
+                font-family: $barlovC;
+                font-weight: 400;
+                color: $lightblue;
+                text-transform: uppercase;
+                padding-bottom: 1.6901408450704223vh;
+            }
+            .sub-sub{
+                font-size: 24px;
+                font-family: $bellafair;
+                color: $white;
+                text-transform: uppercase;
+                padding-bottom: 2.2535211267605635vh;
+            }
+            p{
+                @include p-mb;
+                color: $lightblue;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 768px) {
+    #technology{
+        background-image: url('/assets/technology/background-technology-tablet.jpg');
+        @include bg;
+        main{
+            h5{
+                @include heading5-hm-tb;
+                text-align: start;
+                padding-top: 3.90625vh;
+                padding-bottom: 5.859375vh;
+                padding-left: 5.013vw;
+            }
+            .img{
+                margin-bottom: 5.46875vh;
+                height: 30.2734375vh;
+            }
+        }
+        .wraper{
+            ul{
+                padding-bottom: 4.296875vh;
+                a{
+                    width: 60px !important;
+                    height: 60px !important; 
+                    font-size: 24px;
+                    letter-spacing: 1.5px;
+                }
+            }
+            article{
+                h6{
+                    font-size: 16px ;
+                    letter-spacing: 2.7px ;
+                }
+                .sub-sub{
+                    font-size: 40px !important;
+                    padding-bottom:  2.44140625vh !important;
+                    padding-top: 0.48828125vh !important;
+                }
+                p{
+                    @include p-tb;
+                }
+            }
+        }
+        .container-mb{
+            width: 59.635vw;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px){
+    #technology{
+        background-image: url(/assets/technology/background-technology-desktop.jpg);
+        @include bg;
+        main{
+            text-align: start;
+            h5{
+                @include heading5-hm-pc;
+                padding-left: 11.563vw;
+                padding-top: 8.444444444444445vh;
+            }
+            .wraper2{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 9.028vw ;
+                .img{
+                    display: none;  
+                }
+                .img-1{
+                    display: block;
+                    width: 515px;
+                    height:  58.55555555555556vh;
+                }
+                .wraper{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    gap: 5.556vw;
+                    width: 43.75vw !important;
+                    height: 21.042vw !important;
+                    ul{
+                        flex-direction: column;
+                        padding-bottom: 0;
+                        gap:  3.5555555555555554vh;
+                        li{
+                            a{
+                                width: 80px !important;
+                                height: 80px !important;
+                                font-size: 32px;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                    article{
+                        h6{
+                            padding-bottom: 2.3333333333333335vh!important;
+                        }
+                        p{
+                            @include p-pc;
+                            width: 30.833vw;
+                        }
+                        .sub-sub{
+                            font-size: clamp(2rem ,3.889vw, 3.5625rem) !important;
+                            line-height: 3.9vw !important;
+                            padding-bottom: 3vh !important;
+                            width: 100%;
+                        }
+                    }
+                }
+                .container-mb{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1700px) {
+    .img-1{
+        margin-right: 14.9vw;
+    }
+}
+
+.active-3{
+    background-color: $white;
+    color: $black !important;
+}

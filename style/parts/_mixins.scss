@@ -1,0 +1,48 @@
+@mixin bg{
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+@mixin line{
+    border: 1px solid $lineBg;
+    background: $white;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}   
+
+// pc
+@mixin heading5-hm-pc{
+    font-size: clamp(1.5rem,1.944vw,2.7rem) !important;
+    letter-spacing: 0.328vw !important;
+}
+@mixin p-pc{
+    line-height: clamp(1.5625rem,2vw,2.9625rem)!important;
+    font-size: clamp(1rem,1.25vw,1.45rem) !important;
+}
+
+// tablet
+@mixin heading5-hm-tb{
+    font-size: 2.604vw !important;
+    letter-spacing: 0.44vw !important;
+}
+@mixin p-tb {
+    font-size: 2.083vw !important;
+    line-height: 3.646vw !important;
+}
+
+// mobile
+@mixin heading5-mb{
+    font-family: $barlovC;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+}
+@mixin p-mb{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    font-family: $barlow;
+}
