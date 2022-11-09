@@ -84,7 +84,7 @@
 }
 
 // pc
-@media screen and(min-width: 1025px){
+@media screen and(min-width: 1024px){
     #home{
         background-image: url(../../assets/home/background-home-desktop.jpg);
         @include bg;
@@ -116,6 +116,7 @@
                     height: clamp(12.5rem, 19.028vw, 20.75rem);
                     margin-left: clamp(0.875rem, 26.806vw, 36.25rem);
                     font-size: 32px;
+                    cursor: pointer;
                     &:hover{
                         outline: clamp(2.5rem, 5.2777777777778vw, 3.75rem) solid rgba(151, 151, 151, 0.3);
                         transition: 0.3s;

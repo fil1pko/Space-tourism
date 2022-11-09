@@ -16,16 +16,14 @@
             }
         }
         .swiper{
-            // z-index: -1;
             height: 100%;
-            // margin: 0 auto !important;
             .swiper-slide{
                 text-align: center;
+                cursor: grab;
                 .content{
                     width: 87.2vw !important;
                     margin: 0 auto;
                     img{
-                        // width: 327px;
                         height:  31.408450704225356vh; 
                     }
                     hr{
@@ -74,7 +72,9 @@
         mix-blend-mode: normal;
         opacity: 0.25;
         background-color: $white;
-    
+        &:hover{
+            opacity: 0.5; 
+        }
     }
     .swiper-pagination-bullet-active {
         background: $white;

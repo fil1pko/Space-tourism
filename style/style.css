@@ -47,6 +47,10 @@ header nav ul {
   gap: 3.333vw;
   padding-right: 2.777vw;
 }
+header nav ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff !important;
+}
 header nav ul li a {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -173,6 +177,11 @@ header nav ul li a span {
     background-repeat: no-repeat;
   }
 }
+.active {
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff !important;
+}
+
 #home {
   background-image: url(../../assets/home/background-home-mobile.jpg);
   background-repeat: repeat;
@@ -266,7 +275,7 @@ header nav ul li a span {
     transition: 0.3s;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   #home {
     background-image: url(../../assets/home/background-home-desktop.jpg);
     background-repeat: repeat;
@@ -305,6 +314,7 @@ header nav ul li a span {
     height: clamp(12.5rem, 19.028vw, 20.75rem);
     margin-left: clamp(0.875rem, 26.806vw, 36.25rem);
     font-size: 32px;
+    cursor: pointer;
   }
   #home .container-mb main button:hover {
     outline: clamp(2.5rem, 5.2777777778vw, 3.75rem) solid rgba(151, 151, 151, 0.3);
@@ -361,6 +371,9 @@ header nav ul li a span {
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.36px;
   padding-bottom: 1.2941176471vh;
+}
+#destination .wraper article ul li a:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
 }
 #destination .wraper article h2 {
   color: #ffffff;
@@ -562,6 +575,9 @@ header nav ul li a span {
   letter-spacing: 1px;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
+#technology main .wraper ul li a:hover {
+  border-color: #ffffff;
+}
 #technology main .wraper h6 {
   font-size: 14px;
   letter-spacing: 2.36px;
@@ -681,7 +697,7 @@ header nav ul li a span {
     letter-spacing: 2px;
   }
   #technology main .wraper2 .wraper article h6 {
-    padding-bottom: 2.3333333333vh !important;
+    padding-bottom: clamp(0.0625rem, 1.2222222222vh, 0.75rem) !important;
   }
   #technology main .wraper2 .wraper article p {
     line-height: clamp(1.5625rem, 2vw, 2.9625rem) !important;
@@ -691,16 +707,20 @@ header nav ul li a span {
   #technology main .wraper2 .wraper article .sub-sub {
     font-size: clamp(2rem, 3.889vw, 3.5625rem) !important;
     line-height: 3.9vw !important;
-    padding-bottom: 3vh !important;
+    padding-bottom: 3vh;
     width: 100%;
+    margin-top: 0 !important;
   }
   #technology main .wraper2 .container-mb {
     margin: 0;
   }
 }
 @media screen and (min-width: 1700px) {
-  .img-1 {
-    margin-right: 14.9vw;
+  #technology .img-1 {
+    margin-right: 9.9vw;
+  }
+  #technology .sub-sub {
+    padding-bottom: 0 !important;
   }
 }
 .active-3 {
@@ -736,6 +756,8 @@ header nav ul li a span {
 }
 #crew main .swiper .swiper-slide {
   text-align: center;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 #crew main .swiper .swiper-slide .content {
   width: 87.2vw !important;
@@ -792,6 +814,9 @@ header nav ul li a span {
   mix-blend-mode: normal;
   opacity: 0.25;
   background-color: #ffffff;
+}
+#crew .swiper-pagination-bullet:hover {
+  opacity: 0.5;
 }
 #crew .swiper-pagination-bullet-active {
   background: #ffffff;

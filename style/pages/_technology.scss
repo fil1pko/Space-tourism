@@ -42,6 +42,9 @@
                         border-radius: 50%;
                         letter-spacing: 1px;
                         border: 1px solid rgba(255,255,255,0.25);
+                        &:hover{
+                            border-color: $white;
+                        }
                     }
                 }
             }
@@ -140,6 +143,7 @@
                     display: block;
                     width: 515px;
                     height:  58.55555555555556vh;
+
                 }
                 .wraper{
                     display: flex;
@@ -163,7 +167,7 @@
                     }
                     article{
                         h6{
-                            padding-bottom: 2.3333333333333335vh!important;
+                            padding-bottom: clamp(0.0625rem , 1.2222222222222vh, 0.75rem) !important;
                         }
                         p{
                             @include p-pc;
@@ -172,8 +176,9 @@
                         .sub-sub{
                             font-size: clamp(2rem ,3.889vw, 3.5625rem) !important;
                             line-height: 3.9vw !important;
-                            padding-bottom: 3vh !important;
+                            padding-bottom: 3vh;
                             width: 100%;
+                            margin-top: 0 !important;
                         }
                     }
                 }
@@ -186,8 +191,13 @@
 }
 
 @media screen and(min-width: 1700px) {
-    .img-1{
-        margin-right: 14.9vw;
+    #technology{
+        .img-1{
+            margin-right: 9.9vw;
+        }
+        .sub-sub{
+            padding-bottom: 0 !important;
+        }
     }
 }
 

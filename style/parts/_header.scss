@@ -36,6 +36,10 @@ header{
             gap:  3.333vw;
             padding-right: 2.777vw;
             li{
+                &:hover{
+                    border-bottom: 3px solid rgba(255,255,255,0.25); 
+                    color: $white !important;
+                }
                 a{
                     font-family: $barlovC;
                     text-transform: uppercase;
@@ -46,7 +50,6 @@ header{
                     font-size: 1.1111111111111vw;
                     letter-spacing: 2.7px;
                     padding: 20px 0px 20px 0px;
-                    // height: 100% !important;
                     span{
                         font-weight: bold;
                         padding-right: 7px;
@@ -178,7 +181,7 @@ header{
     }
 }
 
-// .active{
-//     border-bottom: 3px solid $white; 
-//     color: $white !important;
-// }
+.active{
+    border-bottom: 3px solid $white; 
+    color: $white !important;
+}
