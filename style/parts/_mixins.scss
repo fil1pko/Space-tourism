@@ -4,7 +4,6 @@
     height: 100vh;
 }
 
-
 @mixin line{
     border: 1px solid $lineBg;
     background: $white;
@@ -18,7 +17,7 @@
     letter-spacing: 0.328vw !important;
 }
 @mixin p-pc{
-    line-height: clamp(1.5625rem,2vw,2.9625rem)!important;
+    line-height: clamp(1.5625rem,3.5555555555555554vh,2.9625rem)!important;
     font-size: clamp(1rem,1.25vw,1.45rem) !important;
 }
 
@@ -43,6 +42,6 @@
 @mixin p-mb{
     font-weight: 400;
     font-size: 15px;
-    line-height: 25px;
+    line-height: 3.698224852071006vh;
     font-family: $barlow;
 }

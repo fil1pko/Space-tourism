@@ -2,6 +2,7 @@
     background-image: url('/assets/crew/background-crew-mobile.jpg');
     @include bg;
     main{
+        text-align: center;
         h5{
             @include heading5-mb;
             color: $white; 
@@ -23,6 +24,7 @@
                 .content{
                     width: 87.2vw !important;
                     margin: 0 auto;
+                    margin-left: 0;
                     img{
                         height:  31.408450704225356vh; 
                     }
@@ -165,10 +167,12 @@
             }
             .swiper{
                 .swiper-slide{
+                    padding-right: 11.528vw;
                     .content{
                         // position: ;
                         // top: 557px;
-                        margin-left: 11.528vw;
+                        // margin-left: 11.528vw;
+                        margin: 0 auto !important;
                         flex-direction: row-reverse;
                         img{
                             margin: 0;

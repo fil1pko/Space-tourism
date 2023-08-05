@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Destination</title>
+</head>
+<body id="destination" onload="document.getElementById('defaultOpen').click();">
+    <header>
+        <img src="assets/shared/logo.svg" alt="logo">
+        <hr>
+        <input type="checkbox" id="menyAvPaa">
+        <label id="burger" for="menyAvPaa">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <nav id="menu">   
+            <ul>
+                <li><a href="index.html"><span>00</span> home</a></li>
+                <li class="active" ><a href="destination-moon.html"><span>01</span> destination</a></li>
+                <li><a href="crew.html"><span>02</span> crew</a></li>
+                <li><a href="technology.html"><span>03</span> technology</a></li>
+            </ul>                
+        </nav>
+    </header>
+
+
+    <ul id="tab" class="tab">
+        <li><button class="tablinks" onclick="openDestination(event, 'moon')" id="defaultOpen" >moon</button></li>
+        <li><button class="tablinks" onclick="openDestination(event, 'mars')">mars</button></li>
+        <li><button class="tablinks" onclick="openDestination(event, 'europa')">europa</button></li>
+        <li><button class="tablinks" onclick="openDestination(event, 'titan')">titan</button></li>
+    </ul>
+    <div class="container-mb">
+        <main>
+            <h5><span>01</span>pick your destination</h5>
+            <div id="moon" class="tabcontent">
+                <div class="wraper">
+                    <img src="assets/destination/image-moon.png" alt="moon">
+                    <article>
+                        <h2>moon</h2>
+                        <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+
+                        <hr>
+                        <div class="wraper-inf">
+                            <figure>
+                                <h6>avg. distance</h6>
+                                <p class="sub-heading">384,400 km</p>
+                            </figure>
+                            <figure>
+                                <h6>est. travel time</h6>
+                                <p class="sub-heading">3 days</p>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="mars" class="tabcontent">
+                <div class="wraper">
+                    <img src="assets/destination/image-mars.png" alt="mars">
+                    <article>
+                        <h2>mars</h2>
+                        <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+
+                        <hr>
+                        <div class="wraper-inf">
+                            <figure>
+                                <h6>avg. distance</h6>
+                                <p class="sub-heading">225 mil. km</p>
+                            </figure>
+                            <figure>
+                                <h6>est. travel time</h6>
+                                <p class="sub-heading">9 months</p>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="europa" class="tabcontent">
+                <div class="wraper">
+                    <img src="assets/destination/image-europa.png" alt="europa">
+                    <article>
+                        <h2>europa</h2>
+                        <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+
+                        <hr>
+                        <div class="wraper-inf">
+                            <figure>
+                                <h6>avg. distance</h6>
+                                <p class="sub-heading">628 mil. km</p>
+                            </figure>
+                            <figure>
+                                <h6>est. travel time</h6>
+                                <p class="sub-heading">3 years</p>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="titan" class="tabcontent">
+                <div class="wraper">
+                    <img src="assets/destination/image-titan.png" alt="titan">
+                    <article>
+                        <h2>titan</h2>
+                        <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+
+                        <hr>
+                        <div class="wraper-inf">
+                            <figure>
+                                <h6>avg. distance</h6>
+                                <p class="sub-heading">1.6 bil. km</p>
+                            </figure>
+                            <figure>
+                                <h6>est. travel time</h6>
+                                <p class="sub-heading">7 years</p>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript">
+        var tabcontent = document.getElementsByClassName("tabcontent");
+        // console.log(tabcontent);
+        var tablinks = document.getElementsByClassName("tablinks");
+        // console.log(tablinks);
+        let checkbox = document.getElementById('menyAvPaa');
+        let nav = document.getElementById('tab');
+
+        function openDestination(evt, cityName) {
+          var i;
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-sub", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active-sub";
+        }
+
+        checkbox.addEventListener( "change", () => {
+         if ( checkbox.checked ) {
+            tab.style.zIndex="-1";
+         } else {
+            tab.style.zIndex="25";
+         }
+      });
+        </script>
+</body>
+</html>

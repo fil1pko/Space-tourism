@@ -1,4 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
+   //  direction: "horizontal",
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -6,16 +7,20 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-let checkbox = document.getElementById('menyAvPaa');
-        let pagination = document.getElementById('pagination');
-        let slider = document.getElementById('swiper');
-        
-        checkbox.addEventListener( "change", () => {
-         if ( checkbox.checked ) {
-            slider.style.zIndex="-1";
-            pagination.style.zIndex="-1";
-         } else {
-            slider.style.zIndex="25";
-            pagination.style.zIndex="26";
-         }
-      });
+var swiper2 = new Swiper(".mySwiper2", {
+  pagination: {
+    el: ".swiper-pagination2",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+});
+
+    
+
+
+
+
+
+

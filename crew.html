@@ -25,10 +25,10 @@
  
          <nav id="menu">   
              <ul>
-                 <li class="active"><a href="index.html"><span>00</span> home</a></li>
+                 <li><a href="index.html"><span>00</span> home</a></li>
                  <li><a href="destination-moon.html"><span>01</span> destination</a></li>
-                 <li><a href="crew.html"><span>02</span> crew</a></li>
-                 <li><a href="technology-spaceCapsule.html"><span>03</span> technology</a></li>
+                 <li class="active"><a href="crew.html"><span>02</span> crew</a></li>
+                 <li><a href="technology.html"><span>03</span> technology</a></li>
              </ul>                
          </nav>
      </header>
@@ -40,7 +40,7 @@
             <h5><span>02</span>meet your crew</h5>
 
             <div id="swiper" class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper container-mb">
                 <div class="swiper-slide">
                     <div id="douglas" class="content">
                         <img src="/assets/crew/image-douglas-hurley.png" alt="douglas hurley">
@@ -99,6 +99,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script type="text/javascript" src="/scripts/slider.js">
+    </script>
+
+    <script type="text/javascript">
+        let checkbox = document.getElementById('menyAvPaa');
+        let pagination = document.getElementById('pagination');
+        let slider = document.getElementById('swiper');
+        
+        checkbox.addEventListener( "change", () => {
+         if ( checkbox.checked ) {
+            slider.style.zIndex="-1";
+            pagination.style.zIndex="-1";
+         } else {
+            slider.style.zIndex="25";
+            pagination.style.zIndex="26";
+         }
+      });
     </script>
 </body>
 </html>

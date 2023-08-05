@@ -75,6 +75,10 @@ header{
             ul{
                 padding-right: 0;
                 li{
+                    &:hover{
+                        border-bottom: 3px solid rgba(255,255,255,0.25); 
+                        color: $white !important;
+                    }
                     a{
                         line-height: 96px;
                         font-size: 16px;
@@ -109,7 +113,6 @@ header{
             display: none;
             &:checked ~ #menu{
               transform: translateX(0rem);
-            //   display: block;
             }
           }
           
@@ -152,7 +155,11 @@ header{
                 gap: 32px;
                 width: 100%;
                 li{
-                    display: inline-block;
+                    &:hover{
+                        border-right: 3px solid rgba(255,255,255,0.25) !important; 
+                        color: $white !important;
+                        border-bottom: 0;
+                    }
                     a{
                         font-size: 16px;
                         font-family: $barlovC;
@@ -163,6 +170,7 @@ header{
                         letter-spacing: 2.7px;
                         display: flex;
                         padding: 0;
+                        line-height: 31px;
                         span{
                             display: block;
                             font-weight: bold;
@@ -175,13 +183,8 @@ header{
         #menyAvPaa:checked ~ #burger{
             background-image: url(../../assets/shared/icon-close.svg);
             background-repeat: no-repeat;
-            // display: none;
-            // display: none;
         }
     }
 }
 
-.active{
-    border-bottom: 3px solid $white; 
-    color: $white !important;
-}
+

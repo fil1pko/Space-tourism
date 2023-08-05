@@ -1,13 +1,15 @@
 #technology{
     background-image: url('/assets/technology/background-technology-mobile.jpg');
     @include bg;
+    overflow: hidden;
     main{
         text-align: center;
+        z-index: -1 !important;
         h5{
             @include heading5-mb;
             color: $white;
             padding-top: 3.3802816901408vh;
-            padding-bottom: 4.507042253521127vh;
+            // padding-bottom: 4.507042253521127vh;
             span{
                 font-weight: bold;
                 mix-blend-mode: normal;
@@ -15,60 +17,69 @@
                 padding-right: 18px;
             }
         }
-        .img{
-            width: 100vw;
-            min-height: 23.943661971830984vh;
-            margin-bottom: 4.788732394366197vh;
+        .wraper2{
+          position: relative;
+          bottom: 8px;
+          z-index: -600 !important;
         }
-        .img-1{
-            display: none;
-        }
-        .wraper{
-            ul{
-                display: flex;
-                justify-content: center;
-                list-style: none;
-                padding-bottom: 3.6619718309859155vh;
-                gap: 16px;
-                li{
-                    a{
-                        color: $white;
-                        text-decoration: none;
-                        display: flex;
-                        width: clamp(2rem, 10.667vw, 3.125rem);
-                        height: clamp(2rem, 10.667vw, 3.125rem);
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50%;
-                        letter-spacing: 1px;
-                        border: 1px solid rgba(255,255,255,0.25);
-                        &:hover{
-                            border-color: $white;
-                        }
-                    }
+            .swiper-slide{
+                position: relative;
+                bottom: 8px;
+                cursor: grab;
+                .img{
+                    width: 100vw;
+                    min-height: 23.943661971830984vh;
+                    margin-bottom: 14.084507042253522vh;
+                    z-index: 30;
+                }
+                .img-1{
+                    display: none;
+                }
+                h6{
+                    font-size: 14px;
+                    letter-spacing: 2.36px;
+                    font-family: $barlovC;
+                    font-weight: 400;
+                    color: $lightblue;
+                    text-transform: uppercase;
+                    padding-bottom: 1.6901408450704223vh;
+                }
+                .sub-sub{
+                    font-size: 24px;
+                    font-family: $bellafair;
+                    color: $white;
+                    text-transform: uppercase;
+                    padding-bottom: 2.2535211267605635vh;
+                }
+                p{
+                    @include p-mb;
+                    color: $lightblue;
                 }
             }
-            h6{
-                font-size: 14px;
-                letter-spacing: 2.36px;
-                font-family: $barlovC;
-                font-weight: 400;
-                color: $lightblue;
-                text-transform: uppercase;
-                padding-bottom: 1.6901408450704223vh;
-            }
-            .sub-sub{
-                font-size: 24px;
-                font-family: $bellafair;
+            .swiper-pagination-bullet{
+                position: relative;
+                top: 32.13943661971831vh;
+                display: inline-flex;
+                align-items: center ;
+                justify-content: center;
+                margin: 0 var(--swiper-pagination-bullet-horizontal-gap,8px) !important;
+                font-size: 16px ;
+                letter-spacing: 1px;
+                line-height: 40px;
                 color: $white;
-                text-transform: uppercase;
-                padding-bottom: 2.2535211267605635vh;
+                opacity: 1;
+                width: clamp(2rem, 10.667vw, 3.125rem);
+                height: clamp(2rem, 10.667vw, 3.125rem);
+                border: 1px solid rgba(255,255,255,0.25);
+                background: transparent;
+                z-index: 20;
             }
-            p{
-                @include p-mb;
-                color: $lightblue;
+            .swiper-pagination-bullet-active{
+                color: $black;
+                background-color: $white;
+                border-color: $white;
             }
-        }
+        
     }
 }
 
@@ -81,7 +92,7 @@
                 @include heading5-hm-tb;
                 text-align: start;
                 padding-top: 3.90625vh;
-                padding-bottom: 5.859375vh;
+                padding-bottom:  1.95312vh;
                 padding-left: 5.013vw;
             }
             .img{
@@ -89,19 +100,11 @@
                 height: 30.2734375vh;
             }
         }
+       
         .wraper{
-            ul{
-                padding-bottom: 4.296875vh;
-                a{
-                    width: 60px !important;
-                    height: 60px !important; 
-                    font-size: 24px;
-                    letter-spacing: 1.5px;
-                }
-            }
             article{
                 h6{
-                    font-size: 16px ;
+                    font-size: 1.5625vh;
                     letter-spacing: 2.7px ;
                 }
                 .sub-sub{
@@ -117,10 +120,16 @@
         .container-mb{
             width: 59.635vw;
         }
+        .swiper-pagination-bullet{
+            font-size: 24px !important;
+            width: 60px !important;
+            height: 60px !important;
+            top: 40.0390625vh !important;
+        }
     }
 }
 
-@media screen and(min-width: 1024px){
+@media screen and(min-width: 1025px){
     #technology{
         background-image: url(/assets/technology/background-technology-desktop.jpg);
         @include bg;
@@ -131,69 +140,79 @@
                 padding-left: 11.563vw;
                 padding-top: 8.444444444444445vh;
             }
-            .wraper2{
-                display: flex;
-                flex-direction: row-reverse;
-                align-items: center;
-                gap: 9.028vw ;
-                .img{
-                    display: none;  
-                }
-                .img-1{
-                    display: block;
-                    width: 515px;
-                    height:  58.55555555555556vh;
-
-                }
-                .wraper{
+                .wraper2{
                     display: flex;
-                    justify-content: space-around;
+                    flex-direction: row-reverse;
                     align-items: center;
-                    gap: 5.556vw;
-                    width: 43.75vw !important;
-                    height: 21.042vw !important;
-                    ul{
-                        flex-direction: column;
-                        padding-bottom: 0;
-                        gap:  3.5555555555555554vh;
-                        li{
-                            a{
-                                width: 80px !important;
-                                height: 80px !important;
-                                font-size: 32px;
-                                letter-spacing: 2px;
+                    gap: 9.028vw ;
+                    padding-top: 30px;
+                    .img{
+                        display: none;  
+                    }
+                    .img-1{
+                        display: block;
+                        // width: 35.764vw;
+                        height:  58.55555555555556vh;
+    
+                    }
+                    .wraper{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap: 5.556vw;
+                        width: 43.75vw !important;
+                        height: 21.042vw !important;
+                        padding-left: 11.111vw;
+                        article{
+                            h6{
+                                padding-bottom: clamp(0.0625rem , 1.2222222222222vh, 0.75rem) !important;
+                            }
+                            p{
+                                @include p-pc;
+                                width: 30.833vw;
+                                // line-height: 32px !important;
+                            }
+                            .sub-sub{
+                                font-size: clamp(2rem ,3.889vw, 3.5625rem) !important;
+                                line-height: 3.9vw !important;
+                                padding-bottom: 3vh;
+                                width: 100%;
+                                margin-top: 0 !important;
                             }
                         }
                     }
-                    article{
-                        h6{
-                            padding-bottom: clamp(0.0625rem , 1.2222222222222vh, 0.75rem) !important;
-                        }
-                        p{
-                            @include p-pc;
-                            width: 30.833vw;
-                        }
-                        .sub-sub{
-                            font-size: clamp(2rem ,3.889vw, 3.5625rem) !important;
-                            line-height: 3.9vw !important;
-                            padding-bottom: 3vh;
-                            width: 100%;
-                            margin-top: 0 !important;
-                        }
+                    .container-mb{
+                        margin: 0;
                     }
                 }
-                .container-mb{
-                    margin: 0;
-                }
+            
+        }
+        .swiper-pagination2{
+            position: absolute !important;
+            bottom: 19.77777777777778vh;
+            display: flex;
+            flex-direction: column;
+            // left: 11.528vw;
+            .swiper-pagination-bullet{
+              top: auto !important;
+              left: 11.528vw;
+              position: relative;
+              margin-left: 11.528vw !important;
+              width:  8.88888888888889vh !important;
+              height:  8.88888888888889vh !important;
+              margin:   1.7777777777777777vh 0  1.7777777777777777vh 0 !important;
+              font-size: 32px !important;
+              letter-spacing: 2px;
             }
         }
     }
 }
 
+
 @media screen and(min-width: 1700px) {
     #technology{
         .img-1{
-            margin-right: 9.9vw;
+            margin-right: 9.9vw !important;
         }
         .sub-sub{
             padding-bottom: 0 !important;

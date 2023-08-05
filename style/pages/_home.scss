@@ -1,3 +1,11 @@
+@media screen and(max-height: 620px) {
+    #home{
+        p{
+            padding-bottom: 30px !important;
+        }
+    }
+}
+
 #home{
     background-image: url(../../assets/home/background-home-mobile.jpg);
     @include bg;
@@ -6,7 +14,7 @@
         h5{
             @include heading5-mb;
             color: $lightblue;
-            padding-bottom:  2.3988005997002vh;
+            padding-bottom: 2.3988005997002vh;
             padding-top: 7.1964017991004vh;
         }
 
@@ -37,6 +45,7 @@
             font-weight: 400;
             background-color: $white;
             font-size: 20px;
+            // margin-bottom: 50px;
             &:active{
                 outline: 8vw solid rgba(151, 151, 151, 0.1);
                 transition: 0.3s;
@@ -93,7 +102,7 @@
             main{
                 display: flex;
                 align-items: flex-end;
-                padding-top: 17.431vw;
+                padding-top: clamp(6.25rem ,27.88888888888889vh, 15.75rem);
                 article{
                     text-align: start;
                     width: 31.25vw;

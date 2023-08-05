@@ -14,45 +14,55 @@
             padding-right: 18px;
         }
     }
-    .wraper{
+    .tab{
+        position: absolute;
+        text-align: center;
+        top: 39.529411764706vh;
+        // width: 327px;
+        width: 100vw;
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        justify-content: center;
+        // z-index: -1;
+        // padding-top: 3.0588235294118vh;
+        li{
+            button{
+                background: none;
+                border: none;
+                text-decoration: none;
+                color: $lightblue;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-family: $barlovC;
+                letter-spacing: 2.36px;
+                padding-bottom: 1.2941176470588vh;
+                &:hover{
+                    border-bottom: 3px solid rgba(255,255,255,0.25); 
+                }
+            }
+        }
+    }
+    .tabcontent{
+        display: none;
         text-align: center;
         img{
             width: clamp(8.75rem ,45.333333333333vw, 17.5rem);
             height:  clamp(8.75rem ,45.333333333333vw, 17.5rem);
         }
         article{
-            ul{
-                display: flex;
-                list-style: none;
-                gap: 32px;
-                justify-content: center;
-                padding-top: 3.0588235294118vh;
-                li{
-                    a{
-                        text-decoration: none;
-                        color: $lightblue;
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        font-family: $barlovC;
-                        letter-spacing: 2.36px;
-                        padding-bottom: 1.2941176470588vh;
-                        &:hover{
-                            border-bottom: 3px solid rgba(255,255,255,0.25); 
-                        }
-                    }
-                }
-            }
             h2{
                 color: $white;
                 text-transform: uppercase;
                 font-size: 56px;
-                margin-top: 3.5294117647059vh;
+                margin-top: 8.7058823529412vh;
                 font-family: $bellafair;
             }
             p{
                 color: $lightblue;
                 @include p-mb;
                 padding-bottom: 3.7647058823529vh;
+                line-height: 25px;
             }
             hr{
                 @include line;
@@ -95,7 +105,20 @@
                 padding-right: 19px;
             }
         }
-        .wraper{
+        .tab{
+            top: 55.25703125vh;
+            // padding-top: 5.17578125vh;
+            // padding-bottom: 3.125vh;
+            
+            li{
+                button{
+                    font-size: 16px !important;
+                    letter-spacing: 2.7px !important;
+                    padding-bottom: 1.171875vh;
+                }
+            }
+        }
+        .tabcontent{
             width: 74.609vw; 
             margin: 0 auto;
             img{
@@ -103,23 +126,13 @@
                 height: clamp(17.5rem ,39.063vw, 26.25rem);
             }
             h2{
+                margin-top: 10.52109375vh !important;
                 font-size: 80px !important;
                 padding-bottom: 14px;
             }
             p{
                 @include p-tb; 
                 padding-bottom: 4.78515625vh !important;
-            }
-            ul{
-                padding-top: 5.17578125vh;
-                padding-bottom: 3.125vh;
-                li{
-                    a{
-                        font-size: 16px !important;
-                        letter-spacing: 2.7px !important;
-                        padding-bottom: 1.171875vh;
-                    }
-                }
             }
             .wraper-inf{
                 display: flex;
@@ -149,41 +162,58 @@
             padding-top: clamp(3.125rem,8.444444444444445vh,3rem);
             padding-bottom: clamp(2.8125rem, 5.888888888888888vh,3.625rem);
         }
-        .wraper{
-            display: flex ;
-            gap: 10.903vw;
-            text-align: start;
-            img{
-                width: clamp(26.25rem ,30.903vw, 32.75rem);
-                height: clamp(26.25rem ,30.903vw, 32.75rem);
-                margin-top: 6.666666666666667vh;
+        .tab{
+            width: 500px;
+            top: 37vh;
+            left: 46.5vw;
+            li{
+                button{
+                    font-size: 1.1111111111111vw !important;
+                    letter-spacing: 0.15625vw !important;
+                }
             }
-            article{
-                width: 30.903vw;
-                p{
-                    @include p-pc;
+        }
+        .tabcontent{
+            // display: flex !important;
+            .wraper{
+                display: flex;
+                text-align: start;
+                gap: 10.903vw;
+                img{
+                    width: clamp(26.25rem ,30.903vw, 32.75rem);
+                    height: clamp(26.25rem ,30.903vw, 32.75rem);
+                    margin-top: 6.666666666666667vh;
                 }
-                ul{
-                    justify-content: start;
-                    li{
-                        a{
-                            font-size: 1.1111111111111vw !important;
-                            letter-spacing: 0.15625vw !important;
+                article{
+                    width: 30.903vw;
+                    p{
+                        @include p-pc;
+                    }
+                    h2{ 
+                        margin-top: 11.72109375vh !important;
+                        // margin-top: 0 !important;
+                        font-size: clamp(5rem ,6.9444444444444vw,7.5rem) !important;
+                    }
+                    .wraper-inf{
+                        h6{
+                            font-size: 0.97222222222222vw;
                         }
-                    }
-                }
-                h2{
-                    font-size: clamp(5rem ,6.9444444444444vw,7.5rem) !important;
-                }
-                .wraper-inf{
-                    h6{
-                        font-size: 0.97222222222222vw;
-                    }
-                    .sub-heading{
-                        font-size: 1.9444444444444vw !important;
+                        .sub-heading{
+                            font-size: 1.9444444444444vw !important;
+                        }
                     }
                 }
             }
         }
     }
 }
+
+@media screen and(min-width: 1700px){
+    .tab{
+        left: 46.7vw !important;
+    }
+}
+
+
+
+
